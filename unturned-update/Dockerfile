@@ -10,4 +10,4 @@ RUN mkdir -p /opt/steamcmd && cd /opt/steamcmd && curl -s http://media.steampowe
 COPY www/ /var/www/html/
 COPY update.sh /opt/steamcmd/
 RUN chmod 777 /opt/steamcmd/update.sh
-CMD /etc/init.d/apache2 start && /opt/steamcmd/update.sh && tail -f /var/log/apache2/access.log
+CMD /etc/init.d/apache2 start && /opt/steamcmd/update.sh && echo 1 > /var/www/html/done && tail -f /var/log/apache2/access.log
