@@ -1,0 +1,2 @@
+* * * * * root bash /root/update.sh >> /var/log/cron.log 2>&1
+# Mandatory blank line
