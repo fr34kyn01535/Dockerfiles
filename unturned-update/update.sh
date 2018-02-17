@@ -8,3 +8,4 @@ buildid=$(echo $appinfo | pcregrep -o1 '\"public\"[\sa-z\"0-9{}]*\"timeupdated\"
 echo $buildid > /var/www/html/timeupdated
 
 /opt/steamcmd/steamcmd.sh +login $USERNAME $PASSWORD +force_install_dir /unturned +app_update 304930 +exit
+cp /unturned/Modules/Unturned/Unturned.module /unturned/Unturned_Data/Managed/
