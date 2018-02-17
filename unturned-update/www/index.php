@@ -6,7 +6,7 @@
 	
 	$result->oldBuildId = $myBuildId;
 	$result->newBuildId = $newBuildId;
-	$result->uptodate = $myBuildId && $myBuildId != $newBuildId;
+	$result->uptodate = $myBuildId && $myBuildId == $newBuildId;
 	$result->updating = !file_exists("/var/www/html/done");
 	
 	echo json_encode($result);
