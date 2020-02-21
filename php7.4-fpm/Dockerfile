@@ -1,4 +1,4 @@
-FROM php:7.4-rc-fpm
+FROM php:7.4-fpm
 RUN apt-get update && apt-get install -y --no-install-recommends \ 
 	sendmail git libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev libmagickwand-dev libzip-dev zip \
 	&& rm -rf /var/lib/apt/lists/*
